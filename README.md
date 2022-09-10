@@ -32,6 +32,20 @@ Now, here is the mind blowing fact:
 
 The proof that you provide is constant in size, no matter how big the answer is. E.g the answer can be millions of transactions, but you don't need to show them for the state transition to happen. A constant sized proof is enough to convince everyone that the state transition is valid! 🤯
 
+Ehmmm, Ethereum already has this with zkRollups? 🙄
+You got us! But hey, there is a big difference. In zkRollups, there is a centeralized operator, constantly publishing Zero-Knowledge proofs on the main chain, and in case the operator stops doing this (i.e gets unavailable), the chain will roll back to a previous state, from which some other operator is able to build on. This is a huge amount of complexity.
+
+Blockchains like Ethereum/Bitcoin, enforce data-availability of the chain history, and not a SNARK state. Zeeka nodes and validators are implemented in a way to only accept forks that reveal the chain state of their last block, meaning that they will check if the hash of the provided state results in the state-hash submitted on the last block. This mechanism makes sure that the compressed state of the last block is always available. A longer subchain whose tip state is not available is worth nothing and is not accepted by the network. This removes the mentioned complexities by a great deal and creates room for some creativity as well.
+
+Okay, how are you going to handle smart-contracts? 😉
+The equivalent of a Smart Contract in Zeeka blockchain is a Zero Contract. The contracts in Zeeka blockchain are not written for a specific virtual-machine (Like EVM), but written in R1CS (Which is the building block of zkSNARK circuits).
+
+
+In this scheme, the programmer uploads the verifying keys of his R1CS contract (Which can consist of multiple circuits) on the blockchain and people could easily invoke these circuits and move from one state into another with a single small transaction (Which could be a compressed version of thousands of transactions).
+
+How can I be a part of this? ❤️
+Follow us on GitHub! Contribute to the project either by coding or promoting it. 💸 Investments are also welcome. Keep in touch with me on Telegram :)  @keyvankambakhsh
+
 # Instruction to install your own Zeeka node
 
 First you need to update necessary packages — `sudo apt update && sudo apt upgrade -y`
