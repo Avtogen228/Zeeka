@@ -15,6 +15,7 @@ Here is what Alice does:
 - She first hides the balls behind her back.
 - She shuffles the balls with a 50% chance.
 - She shows back the balls to Bob, and ask him: - Did I shuffle the balls?
+
 ![shuffle](https://user-images.githubusercontent.com/96244917/189488151-538d5a26-7099-41b6-8dbe-bdbd402effb1.png)
 
 If the balls are really different in colors, Bob would give Alice the correct answer. If he can't distinguish their colors, he still can give Alice a random answer, and his answer can still be correct. But the chances of giving a correct answer is 50%.
