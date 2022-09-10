@@ -20,8 +20,8 @@ Change *your seed phrase* to your new wallet that you should create specially fo
 
 Create a system file and don't forget to change [your ip] to your ip — 
 
-`sudo tee <<EOF >/dev/null /etc/systemd/system/zeeka.service`
-`[Unit]`
+`sudo tee <<EOF >/dev/null /etc/systemd/system/zeeka.service`  
+`[Unit]`  
 `Description=Zeeka node`
 `After=network.target`
 
