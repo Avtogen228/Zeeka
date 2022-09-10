@@ -3,7 +3,7 @@ In simplest words, Zeeka (ℤ) is a cryptocurrency which aims to provide a light
 
 For detailed technical information, read the [Zeeka Whitepaper](https://hackmd.io/_Sw5u2lUR9GfBV5vwtoMSQ)! Also, we are actively developing the Zeeka project. Follow us on [GitHub](https://github.com/zeeka-network)!
 
-Huh? Zero-Knowledge proofs? 🤔
+## Huh? Zero-Knowledge proofs? 🤔
 A Zero-Knowledge protocol is a crytographic method by which someone can prove that they know the answer of a problem without actually revealing it. A very good example of an interactive Zero-Knowledge proof is provided below:
 
 Suppose Alice is blindfolded and has two balls in her hands. Bob, who is able to see the balls, claims that the balls are different in colors. Alice doesn't trust Bob. How can Bob convince Alice that the balls have different colors (The problem), without uncovering Alice's eyes (Revealing the answer)?
@@ -21,7 +21,7 @@ If the balls are really different in colors, Bob would give Alice the correct an
 
 Alice repeats the procedure for 20 times. If the balls have same colors, the chances of Bob giving the correct answer all the 20 times is (1/2)^20 (Around 0.000001%). The probability is so tiny that Alice can conclude that Bob is really able to distinguish between the balls, leading to the conclusion that they really have different colors.
 
-What are you trying to prove? 😐
+## What are you trying to prove? 😐
 Suppose there is a novel payment system that consists of a merkle tree in which every leaf represents an account (A public key and a balance). We define the state of the system as the merkle root of this tree.
 
 ![Hash_Tree svg](https://user-images.githubusercontent.com/96244917/189488169-8faae011-20d5-4fe5-9608-538fe838d9da.png)
@@ -32,18 +32,19 @@ Now, here is the mind blowing fact:
 
 The proof that you provide is constant in size, no matter how big the answer is. E.g the answer can be millions of transactions, but you don't need to show them for the state transition to happen. A constant sized proof is enough to convince everyone that the state transition is valid! 🤯
 
-Ehmmm, Ethereum already has this with zkRollups? 🙄
+## Ehmmm, Ethereum already has this with zkRollups? 🙄
 You got us! But hey, there is a big difference. In zkRollups, there is a centeralized operator, constantly publishing Zero-Knowledge proofs on the main chain, and in case the operator stops doing this (i.e gets unavailable), the chain will roll back to a previous state, from which some other operator is able to build on. This is a huge amount of complexity.
 
 Blockchains like Ethereum/Bitcoin, enforce data-availability of the chain history, and not a SNARK state. Zeeka nodes and validators are implemented in a way to only accept forks that reveal the chain state of their last block, meaning that they will check if the hash of the provided state results in the state-hash submitted on the last block. This mechanism makes sure that the compressed state of the last block is always available. A longer subchain whose tip state is not available is worth nothing and is not accepted by the network. This removes the mentioned complexities by a great deal and creates room for some creativity as well.
 
-Okay, how are you going to handle smart-contracts? 😉
+## Okay, how are you going to handle smart-contracts? 😉
 The equivalent of a Smart Contract in Zeeka blockchain is a Zero Contract. The contracts in Zeeka blockchain are not written for a specific virtual-machine (Like EVM), but written in R1CS (Which is the building block of zkSNARK circuits).
 
+![r1cs](https://user-images.githubusercontent.com/96244917/189489478-201e59c9-ce3d-4e9b-b6ae-a15412d53bbd.png)
 
 In this scheme, the programmer uploads the verifying keys of his R1CS contract (Which can consist of multiple circuits) on the blockchain and people could easily invoke these circuits and move from one state into another with a single small transaction (Which could be a compressed version of thousands of transactions).
 
-How can I be a part of this? ❤️
+## How can I be a part of this? ❤️
 Follow us on GitHub! Contribute to the project either by coding or promoting it. 💸 Investments are also welcome. Keep in touch with me on Telegram :)  @keyvankambakhsh
 
 # Instruction to install your own Zeeka node
