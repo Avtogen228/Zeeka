@@ -18,7 +18,7 @@ Initialize node — `bazuka init --seed [your seed phrase] --network debug --nod
 
 Change *your seed phrase* to your new wallet that you should create specially for Zeeka. Just create a new wallet in Metamask (for example) and past the seed phrase to the command in ''. Example `bazuka init --seed 'avtogen is the best crypto user ever for sure i promise you' --network debug --node 127.0.0.1:8765`
 
-Create a system file and don't forget to change [your ip] to your ip — ``sudo tee <<EOF >/dev/null /etc/systemd/system/zeeka.service
+Create a system file and don't forget to change [your ip] to your ip — **sudo tee <<EOF >/dev/null /etc/systemd/system/zeeka.service
 [Unit]
 Description=Zeeka node
 After=network.target
@@ -32,7 +32,7 @@ LimitNOFILE=65535
 
 [Install]
 WantedBy=multi-user.target
-EOF``
+EOF**
 
 Run the service — `sudo systemctl daemon-reload` 
                   `sudo systemctl enable zeeka`
