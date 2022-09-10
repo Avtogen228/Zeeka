@@ -45,7 +45,7 @@ The equivalent of a Smart Contract in Zeeka blockchain is a Zero Contract. The c
 In this scheme, the programmer uploads the verifying keys of his R1CS contract (Which can consist of multiple circuits) on the blockchain and people could easily invoke these circuits and move from one state into another with a single small transaction (Which could be a compressed version of thousands of transactions).
 
 ## How can I be a part of this? ❤️
-Follow us on GitHub! Contribute to the project either by coding or promoting it. 💸 Investments are also welcome. Keep in touch with me on Telegram :)  @keyvankambakhsh
+Follow us on GitHub! Contribute to the project either by coding or promoting it. 💸 Investments are also welcome. Keep in touch with me on Telegram :)  [@keyvankambakhsh](https://t.me/keyvankambakhsh)
 
 # Instruction to install your own Zeeka node
 
