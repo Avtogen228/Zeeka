@@ -6,9 +6,31 @@ For detailed technical information, read the [Zeeka Whitepaper](https://hackmd.i
 Huh? Zero-Knowledge proofs? 🤔
 A Zero-Knowledge protocol is a crytographic method by which someone can prove that they know the answer of a problem without actually revealing it. A very good example of an interactive Zero-Knowledge proof is provided below:
 
-- Suppose Alice is blindfolded and has two balls in her hands. Bob, who is able to see the balls, claims that the balls are different in colors. Alice doesn't trust Bob. How can Bob convince Alice that the balls have different colors (The problem), without uncovering Alice's eyes (Revealing the answer)?
+Suppose Alice is blindfolded and has two balls in her hands. Bob, who is able to see the balls, claims that the balls are different in colors. Alice doesn't trust Bob. How can Bob convince Alice that the balls have different colors (The problem), without uncovering Alice's eyes (Revealing the answer)?
 
 ![colorblind](https://user-images.githubusercontent.com/96244917/189488116-2ee7ab0a-1b05-40a3-b73b-3679ea649f2a.png)
+
+Here is what Alice does:
+
+- She first hides the balls behind her back.
+- She shuffles the balls with a 50% chance.
+- She shows back the balls to Bob, and ask him: - Did I shuffle the balls?
+![shuffle](https://user-images.githubusercontent.com/96244917/189488151-538d5a26-7099-41b6-8dbe-bdbd402effb1.png)
+
+If the balls are really different in colors, Bob would give Alice the correct answer. If he can't distinguish their colors, he still can give Alice a random answer, and his answer can still be correct. But the chances of giving a correct answer is 50%.
+
+Alice repeats the procedure for 20 times. If the balls have same colors, the chances of Bob giving the correct answer all the 20 times is (1/2)^20 (Around 0.000001%). The probability is so tiny that Alice can conclude that Bob is really able to distinguish between the balls, leading to the conclusion that they really have different colors.
+
+What are you trying to prove? 😐
+Suppose there is a novel payment system that consists of a merkle tree in which every leaf represents an account (A public key and a balance). We define the state of the system as the merkle root of this tree.
+
+![Hash_Tree svg](https://user-images.githubusercontent.com/96244917/189488169-8faae011-20d5-4fe5-9608-538fe838d9da.png)
+
+We want to prove a big set of transactions have happened, changing the state of the system from A to B (The problem), without showing the transactions (The answer).
+
+Now, here is the mind blowing fact:
+
+The proof that you provide is constant in size, no matter how big the answer is. E.g the answer can be millions of transactions, but you don't need to show them for the state transition to happen. A constant sized proof is enough to convince everyone that the state transition is valid! 🤯
 
 # Instruction to install your own Zeeka node
 
