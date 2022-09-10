@@ -1,3 +1,15 @@
+# What is Zeeka?
+In simplest words, Zeeka (ℤ) is a cryptocurrency which aims to provide a light and scalable blockchain by extensively using the help of Zero-Knowledge proof technology.
+
+For detailed technical information, read the [Zeeka Whitepaper](https://hackmd.io/_Sw5u2lUR9GfBV5vwtoMSQ)! Also, we are actively developing the Zeeka project. Follow us on [GitHub](https://github.com/zeeka-network)!
+
+Huh? Zero-Knowledge proofs? 🤔
+A Zero-Knowledge protocol is a crytographic method by which someone can prove that they know the answer of a problem without actually revealing it. A very good example of an interactive Zero-Knowledge proof is provided below:
+
+- Suppose Alice is blindfolded and has two balls in her hands. Bob, who is able to see the balls, claims that the balls are different in colors. Alice doesn't trust Bob. How can Bob convince Alice that the balls have different colors (The problem), without uncovering Alice's eyes (Revealing the answer)?
+
+![colorblind](https://user-images.githubusercontent.com/96244917/189488116-2ee7ab0a-1b05-40a3-b73b-3679ea649f2a.png)
+
 # Instruction to install your own Zeeka node
 
 First you need to update necessary packages — `sudo apt update && sudo apt upgrade -y`
